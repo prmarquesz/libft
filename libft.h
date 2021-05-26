@@ -21,5 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
+int		ft_isascii(int c);
 
 #endif
