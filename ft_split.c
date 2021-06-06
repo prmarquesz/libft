@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 14:03:50 by proberto          #+#    #+#             */
-/*   Updated: 2021/06/05 20:04:28 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/06 01:35:42 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static int	get_len(char *s, char c, int opt)
 			s++;
 		}
 	}
-	else if (opt == 2)
+	else
 	{
 		i = 0;
 		while (*s && *s != c)
