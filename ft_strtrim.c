@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:57:29 by proberto          #+#    #+#             */
-/*   Updated: 2021/06/07 14:09:18 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/07 14:11:53 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len_s1 = ft_strlen(s1);
 	len_set = ft_strlen(set);
 	offsets[0] = prefixtrim(s1, set, len_set);
-	if (offsets[0] == len_s1)
-	{
-		offsets[1] = 0;
-		len_strtrim = 1;
-	}
-	else
+	offsets[1] = 0;
+	len_strtrim = 1;
+	if (offsets[0] != len_s1)
 	{
 		offsets[1] = suffixtrim(s1, set, len_s1 - 1, len_set);
 		len_strtrim = len_s1 - offsets[0] - (len_s1 - offsets[1]) + 1;
