@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/05 14:03:50 by proberto          #+#    #+#             */
-/*   Updated: 2021/06/06 01:35:42 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/06 03:37:58 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	**ft_split(char const *s, char c)
 	delimiter[0] = c;
 	delimiter[1] = '\0';
 	s_aux = ft_strtrim(s, delimiter);
+	if (!s_aux)
+		return (NULL);
 	if (*s_aux == '\0')
 		size = 0;
 	else
