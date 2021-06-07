@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 02:09:39 by proberto          #+#    #+#             */
-/*   Updated: 2021/05/29 13:02:42 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/07 11:23:50 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,19 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*ptr_dst;
 	unsigned char	*ptr_src;
 
+	if (!dst && !src)
+		return (dst);
 	ptr_dst = (unsigned char *) dst;
 	ptr_src = (unsigned char *) src;
 	if (ptr_src > ptr_dst)
 		ft_memcpy(dst, src, len);
 	else
-		while ((int)(len--) >= 0)
-			ptr_dst[len] = ptr_src[len];
+	{
+		while (len > 0)
+		{
+			ptr_dst[len - 1] = ptr_src[len - 1];
+			len--;
+		}
+	}
 	return (dst);
 }
