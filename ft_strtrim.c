@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:57:29 by proberto          #+#    #+#             */
-/*   Updated: 2021/06/02 01:24:20 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/07 14:09:18 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len_strtrim = len_s1 - offsets[0] - (len_s1 - offsets[1]) + 1;
 	}
 	strtrim = (char *) malloc(len_strtrim * sizeof(char));
+	if (!strtrim)
+		return (NULL);
 	makestrtrim(s1, strtrim, offsets[0], len_strtrim);
 	return (strtrim);
 }
