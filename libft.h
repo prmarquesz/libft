@@ -16,6 +16,7 @@
 # include	<stddef.h>
 # include	<stdlib.h>
 # include	<unistd.h>
+# include	<limits.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
