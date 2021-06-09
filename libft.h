@@ -25,6 +25,7 @@ typedef struct s_list
 }					t_list;
 
 t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
