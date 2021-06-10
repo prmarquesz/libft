@@ -6,7 +6,7 @@
 /*   By: proberto <proberto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 01:38:37 by proberto          #+#    #+#             */
-/*   Updated: 2021/06/09 02:02:41 by proberto         ###   ########.fr       */
+/*   Updated: 2021/06/10 00:01:10 by proberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	new->next = NULL;
 	if (!*lst)
 		*lst = new;
 	else
